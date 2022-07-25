@@ -26,8 +26,8 @@ interface BookWithRentalMapper {
     )
     fun selectMany(selectStatement: SelectStatementProvider): List<BookWithRentalRecord>
 
-//    @SelectProvider(type = SqlProviderAdapter::class, method = "select")
-//    @ResultMap("BookWithRentalRecordResult")
-//    fun selectOne(selectStatement: SelectStatementProvider): BookWithRentalRecord?
+    @SelectProvider(type = SqlProviderAdapter::class, method = "select")
+    @ResultMap("BookWithRentalRecordResult")
+    fun selectOne(selectStatement: SelectStatementProvider): BookWithRentalRecord?
 
 }

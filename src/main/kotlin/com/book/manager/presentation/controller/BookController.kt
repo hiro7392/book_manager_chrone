@@ -24,9 +24,9 @@ class BookController(
         return GetBookListResponse(bookList)
     }
 
-//    @GetMapping("/detail/{book_id}")
-//    fun getDetail(@PathVariable("book_id") bookId: Long): GetBookDetailResponse {
-//        val book = bookService.getDetail(bookId)
-//        return GetBookDetailResponse(book)
-//    }
+    @GetMapping("/detail/{book_id}")
+    fun getDetail(@PathVariable("book_id") bookId: Long): GetBookDetailResponse {
+        val book = bookService.getDetail(bookId)
+        return GetBookDetailResponse(book)
+    }
 }

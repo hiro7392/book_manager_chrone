@@ -12,7 +12,7 @@ class BookService(
         return bookRepository.findAllWithRental()
     }
 
-//    fun getDetail(bookId: Long): BookWithRental {
-//        return bookRepository.findWithRental(bookId) ?: throw IllegalArgumentException("存在しない書籍ID: $bookId")
-//    }
+    fun getDetail(bookId: Long): BookWithRental {
+        return bookRepository.findWithRental(bookId) ?: throw IllegalArgumentException("存在しない書籍ID: $bookId")
+    }
 }

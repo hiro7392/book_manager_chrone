@@ -8,7 +8,7 @@ import com.book.manager.infrastructure.database.mapper.BookMapper
 import com.book.manager.infrastructure.database.mapper.custom.BookWithRentalMapper
 //import com.book.manager.infrastructure.database.mapper.custom.columnList
 import com.book.manager.infrastructure.database.mapper.custom.select
-//import com.book.manager.infrastructure.database.mapper.custom.selectByPrimaryKey
+import com.book.manager.infrastructure.database.mapper.custom.selectByPrimaryKey
 import com.book.manager.infrastructure.database.mapper.deleteByPrimaryKey
 import com.book.manager.infrastructure.database.mapper.updateByPrimaryKeySelective
 import com.book.manager.infrastructure.database.record.BookRecord
@@ -26,9 +26,9 @@ class BookRepositoryImpl(
         return bookWithRentalMapper.select().map { toModel(it) }
     }
 
-//    override fun findWithRental(id: Long): BookWithRental? {
-//        return bookWithRentalMapper.selectByPrimaryKey(id)?.let { toModel(it) }
-//    }
+    override fun findWithRental(id: Long): BookWithRental? {
+        return bookWithRentalMapper.selectByPrimaryKey(id)?.let { toModel(it) }
+    }
 //
 //    override fun register(book: Book) {
 //        bookMapper.insert(toRecord(book))
