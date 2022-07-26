@@ -30,6 +30,10 @@ class AdminBookController(
             )
         )
     }
+    @PutMapping("/update")
+    fun update(@RequestBody request: UpdateBookRequest){
+        adminBookService.update(request.id,request.title,request.author,request.releaseDate)
+    }
 
 //    @PutMapping("/update")
 //    fun update(@RequestBody request: UpdateBookRequest) {
