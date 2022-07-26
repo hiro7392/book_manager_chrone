@@ -39,9 +39,9 @@ class BookRepositoryImpl(
         bookMapper.updateByPrimaryKeySelective(BookRecord(id, title, author, releaseDate))
     }
 //
-//    override fun delete(id: Long) {
-//        bookMapper.deleteByPrimaryKey(id)
-//    }
+    override fun delete(id: Long) {
+        bookMapper.deleteByPrimaryKey(id)
+    }
 
     private fun toModel(record: BookWithRentalRecord): BookWithRental {
         val book = Book(

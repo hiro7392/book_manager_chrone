@@ -35,10 +35,10 @@ class AdminBookController(
         adminBookService.update(request.id,request.title,request.author,request.releaseDate)
     }
 
-//    @PutMapping("/update")
-//    fun update(@RequestBody request: UpdateBookRequest) {
-//        adminBookService.update(request.id, request.title, request.author, request.releaseDate)
-//    }
+    @DeleteMapping("/delete/{book_id}")
+    fun delete(@PathVariable("book_id") bookId: Long){
+        adminBookService.delete((bookId))
+    }
 //
 //    @DeleteMapping("/delete/{book_id}")
 //    fun delete(@PathVariable("book_id") bookId: Long) {
